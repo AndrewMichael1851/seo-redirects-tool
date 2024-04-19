@@ -35,6 +35,18 @@ def parse_file(filename='redirects.csv'):
 
             try:
                 response = requests.head(source_url, allow_redirects = True, timeout = 12)
+
+                redirects = requests.get(source_url)
+                if redirects.history:
+                    print('#####')
+                    print('Request was redirected.')
+                    for resp in redirects.history:
+                        print(resp.status_code, resp.url)
+                    print('Final destination:')
+                    print(redirects.status_code, redirects.url)
+                else:
+                    print('#####')
+                    print('Request was not redirected.')
             
             except Exception as e:
                 response = None
