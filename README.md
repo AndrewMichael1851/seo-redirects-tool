@@ -3,5 +3,5 @@ A tool to automatically create a list of redirects by comparing the content of t
 
 ## Contents
 This tool includes the following Python scripts:
-- **url-checker.py** A URL checker that creates a CSV of all the redirects present on a site.
+- **url-redirect-writer.py** A URL checker that creates a CSV of all the redirects present on a site.
 - TODO: Make a version of this: https://www.lupagedigital.com/blog/redirect-mapping-tool/#How_to_Build_a_Free_Redirect_Mapping_Tool
